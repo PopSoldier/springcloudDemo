@@ -1,0 +1,16 @@
+server:
+  port: 80
+
+spring:
+  application:
+    name: order
+
+eureka:
+  client:
+    register-with-eureka: true  #是否将自己注册到 Eureka-Server 中，默认的为 true   registerWithEureka等同于register_with_eureka
+    fetchRegistry: true        #是否需要拉取服务信息，默认未true       fetchRegistry等同于 fetch-registry
+    service-url:
+      defaultZone: http://eureka7002.com:7002/eureka/,http://eureka7001.com:7001/eureka/
+  instance:
+    instance-id: order80
+    prefer-ip-address: true
